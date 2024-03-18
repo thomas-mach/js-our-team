@@ -45,6 +45,12 @@ const member6 = getMember(
 )
 // creare arrey degli oggetti
 const members = [member1, member2, member3, member4, member5, member6]
-
-console.log(members)
+// creare ciclo (for) per scorrere array members
+for (let i = 0; i < members.length; i++){
+// creare ciclo (for in) per scorrere oggetto    
+    for(let key in members[i]){
+        // stampare valore di ogni chiave
+    console.log(key +': '+ members[i][key])
+    }
+}
 
