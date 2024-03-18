@@ -45,12 +45,19 @@ const member6 = getMember(
 )
 // creare arrey degli oggetti
 const members = [member1, member2, member3, member4, member5, member6]
+
 // creare ciclo (for) per scorrere array members
+
 for (let i = 0; i < members.length; i++){
-// creare ciclo (for in) per scorrere oggetto    
+    let newMember = document.createElement('div')// cera nuovo div nel body per ogni elemento del array members 
+    document.body.appendChild(newMember) //aggiunge div per ogni elemento
+    // creare ciclo (for in) per scorrere oggetto    
     for(let key in members[i]){
         // stampare valore di ogni chiave
-    console.log(key +': '+ members[i][key])
+        console.log(key +': '+ members[i][key])
+    let newParagraf = document.createElement('p') //crea un paragrafo per ogni chiave
+    newParagraf.textContent = `${key}: ${members[i][key]}` //aggiunge chiave  e valore
+    newMember.appendChild(newParagraf) // appende paragrafo a div creato nel ciclo for
     }
 }
 
